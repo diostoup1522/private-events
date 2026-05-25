@@ -3,3 +3,7 @@
 <%= @event.date %>
 <%= @event.creator_id %>
 <%= @event.creator.email %>
+<br><br>
+<% @event.attendees.each do |attendee| %>
+  <%= attendee.email %>
+<% end %>

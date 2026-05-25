@@ -2,10 +2,27 @@
   <%= @user.id %>
   <%= @user.email %>
 </div>
-<% @user.posts.each do |post| %>
+<% @user.events.each do |post| %>
   <div>
     <%= post.id %>
     <%= post.title %>
     <%= post.date %>
   </div>
+<% end %>
+<% @user.attended_events.each do |post| %>
+  <% if Date.today < post.date %>
+    <div>
+      <%= post.title %>
+      <%= post.date %>
+    </div>
+  <% end %>
+<% end %>
+<br>
+<% @user.attended_events.each do |post| %>
+  <% if Date.today > post.date %>
+    <div>
+      <%= post.title %>
+      <%= post.date %>
+    </div>
+  <% end %>
 <% end %>

@@ -1,0 +1,10 @@
+<%= form_with model: @event_attendance do |form| %>
+  <%= form.label :attended_event_id, "Event id:" %>
+  <%= form.number_field :attended_event_id %>
+  <%= form.label :attendee_id, "Attendee id:" %>
+  <%= form.number_field :attendee_id %>
+  <%= form.submit "Submit" %>
+<% end %>
+<% @event_attendance.errors.full_messages.each do |msg| %>
+  <p><%= msg %></p>
+<% end %>

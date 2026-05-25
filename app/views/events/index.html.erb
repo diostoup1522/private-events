@@ -1,5 +1,13 @@
 <h1>Events:</h1>
-<% @events.each do |event| %>
+<% @events.upcoming.each do |event| %>
+  <div>
+    <%= event.id%>
+    <%= event.title %>
+    <%= event.date %>
+  </div>
+<% end %>
+<br><br>
+<% @events.past.each do |event| %>
   <div>
     <%= event.id%>
     <%= event.title %>
