@@ -1,3 +1,7 @@
+<%= link_to "Sign-up", new_user_registration_path %>
+<%= link_to "Sign-in", new_user_session_path %>
+<%= link_to "Create Event", new_event_path %>
+<%= link_to "Create Attendance", new_event_attendance_path %>
 <h1>Events:</h1>
 <% @events.upcoming.each do |event| %>
   <div>

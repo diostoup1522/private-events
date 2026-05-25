@@ -5,6 +5,7 @@
   <%= form.number_field :attendee_id %>
   <%= form.submit "Submit" %>
 <% end %>
+<%= link_to "Home", root_path %>
 <% @event_attendance.errors.full_messages.each do |msg| %>
   <p><%= msg %></p>
 <% end %>
