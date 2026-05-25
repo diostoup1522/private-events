@@ -1,0 +1,11 @@
+<div>
+  <%= @user.id %>
+  <%= @user.email %>
+</div>
+<% @user.posts.each do |post| %>
+  <div>
+    <%= post.id %>
+    <%= post.title %>
+    <%= post.date %>
+  </div>
+<% end %>
